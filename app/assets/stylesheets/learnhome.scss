@@ -1,0 +1,593 @@
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700';
+$price-green: #2ba08b;
+$site-green: #34a994;
+
+.holder {
+  display: block;
+  margin: 0 auto;
+  width: 1180px;
+}
+
+/* header */
+#header {
+  position: relative;
+  padding-top: 108px;
+  text-transform: uppercase;
+}
+
+#header > a {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-114px);
+}
+
+.login {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 29px;
+  letter-spacing: 1px;
+  font-size: 13px;
+  font-weight: 400;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 17px;
+    content: '';
+    background: image-url("icons_sprite.png") no-repeat -154px -2px;
+  }
+
+    a {
+      text-decoration: none;
+      color: #605f5f;
+      font-weight: 600;
+    }
+}
+
+.cart {
+  margin-right: 17px;
+  float: right;
+  position: relative;
+
+  .circle {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      top: -10px;
+      left: -7px;
+      width: 18px;
+      height: 18px;
+      border-radius: 9px;
+      line-height: 18px;
+      background: $site-green;
+      font-size: 11px;
+      font-weight: 700;
+      color: #fff;
+      text-align: center;
+  }
+
+  a {
+    display: block;
+    position: relative;
+    padding-left: 29px;
+    text-weight: 400;
+    letter-spacing: 1px;
+    font-size: 13px;
+    text-decoration: none;
+    color: #323232;
+
+    &:before {
+      position: absolute;
+      top: -4px;
+      left: 4px;
+      height: 21px;
+      width: 16px;
+      content: '';
+      background: image-url("icons_sprite.png") no-repeat -2px -2px;
+    }
+
+  }
+
+    .tpricespan {
+      font-size: 15px;
+      color: $price-green;
+    }
+
+}
+
+.hotline {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 118px;
+  padding-left: 29px;
+  font-size: 13px;
+  font-weight: 400;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 21px;
+    width: 21px;
+    content: '';
+    background: image-url("icons_sprite.png") no-repeat -91px -2px;
+  }
+
+  span {
+    font-weight: 600;
+    font-size: 16px;
+  }
+}
+
+/* navigation */
+.main-nav ul {
+  width: 980px;
+  height: 16px;
+  margin-bottom: 20px;
+  border-bottom: 5px solid $site-green;
+  padding: 0 100px 15px;
+  text-decoration: none;
+  text-align: center;
+  li {
+    display: inline;
+    margin-right: 58px;
+    line-height: 16px;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: #444;
+    }
+  }
+}
+
+.popup {
+  position: fixed;
+  box-sizing: border-box;
+  bottom: 15px;
+  left: 15px;
+  display: none;
+  opacity: 0;
+  transform: translate(-720px, 0);
+  height: 220px;
+  line-height: 220px;
+  z-index: 5;
+  padding: 0 20px;
+  transition: all 400ms;
+  background-color: #fff;
+  border: 2px solid $site-green;
+  border-radius: 5px;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #444;
+}
+
+.appear {
+  display: inline-block;
+}
+
+.visappear {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* CONTENT fixedblocks*/
+
+.fixedblocks {
+  height: 680px;
+  margin-bottom: 45px;
+}
+
+.fixblock {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  vertical-align: top;
+}
+
+.fixblock > a {
+  display: block;
+}
+
+.collection {
+  height: 680px;
+  width: 290px;
+  float: left;
+  position: relative;
+
+  img {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+
+  .feblaunches {
+    margin: 127px 0 20px 66px;
+    height: 43px;
+    width: 160px;
+    background: image-url("launches.png") no-repeat;
+  }
+
+  .button {
+    height: 45px;
+    width: 180px;
+    margin-left: 57px;
+    background-color: $site-green;
+    line-height: 45px;
+    text-transform: uppercase;
+
+    a {
+      display: block;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+    }
+  }
+}
+
+.sales {
+  display: inline-block;
+  height: 362px;
+  width: 560px;
+  position: relative;
+
+  .summersale {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-top: 17px;
+    margin-left: 115px;
+    height: 329px;
+    width: 329px;
+    background: image-url("sale.png") no-repeat center center;
+  }
+
+  a {
+    display: block;
+  }
+}
+
+.newarrivals {
+  display: inline-block;
+  position: relative;
+  height: 362px;
+  width: 290px;
+  float: right;
+
+  a:before {
+    position: absolute;
+    top: 151px;
+    left: 35px;
+    height: 51px;
+    width: 206px;
+    content: '';
+    background: image-url("newarrivals.png") no-repeat;
+  }
+}
+
+.lbotblock {
+  display: inline-block;
+  height: 298px;
+  width: 280px;
+}
+
+.rbotblock {
+  display: inline-block;
+  height: 298px;
+  width: 570px;
+}
+
+/*CONTENT PRODUCTS*/
+
+.countprod, .loadmore > a {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.loadmore > a {
+  text-decoration: none;
+}
+
+.countprod {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  margin-bottom: 45px;
+  color: #595959;
+}
+
+.loadmore a {
+  margin-top: 45px;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #595959;
+}
+
+.products {
+  text-align: center;
+}
+
+.productcard {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 398px;
+  width: 279px;
+  margin: 0 6px 14px;
+  border: 1px solid transparent;
+  background-color: #fff;
+  text-transform: uppercase;
+
+  &:hover {
+    box-shadow: 0 0 0 11px #f5f5f5;
+    border: 1px solid #ececec;
+
+    .ninjablock {
+      display: block;
+      width: 277px;
+      height: 61px;
+      border: 1px solid #ececec;
+      box-shadow: 9px 10px 0 2px #f5f5f5, -9px 10px 0 2px #f5f5f5;
+
+      .prodbutton {
+        opacity: 1;
+        top: -18px;
+        left: 49px;
+      }
+    }
+  }
+
+  hr {
+    margin: 0 auto;
+    height: 2px;
+    width: 43px;
+    border: none;
+    background-color: #ccc;
+    margin-bottom: 14px;
+  }
+
+  .prodfoto {
+    height: 300px;
+    background-color: #ccc;
+    margin-bottom: 5px;
+  }
+
+  .prodinfo {
+    z-index: 100;
+    height: 82px;
+    font-size: 18px;
+    color: #595959;
+    background-color: #fff;
+
+    .name {
+      display: block;
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 14px;
+      letter-spacing: 1px;
+    }
+
+    .sumprice {
+      display: block;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+      .saleprice {
+        font-size: 14px;
+        font-weight: 300;
+        text-decoration: line-through;
+        margin-right: 5px;
+      }
+
+      .price {
+        font-weight: 300;
+      }
+  }
+}
+
+/* ninja blocks*/
+
+.ninjablock {
+  position: relative;
+  top: -7px;
+  left: -1px;
+  height: 0;
+  width: 279px;
+  background-color: #fff;
+  border: 0 solid #ececec;
+  transition: height 750ms;
+
+  .prodbutton {
+    position: absolute;
+    cursor: pointer;
+    user-select: none;
+    height: 32px;
+    width: 180px;
+    opacity: 0;
+    top: -17px;
+    left: 50px;
+    background-color: $site-green;
+    line-height: 32px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    transition: opacity 500ms;
+  }
+}
+
+/* footer */
+#footer {
+  margin-top: 119px;
+  border-top: 1px solid #d6d6d6;
+}
+
+.fcontent {
+  position: relative;
+  padding-top: 110px;
+  margin-bottom: 47px;
+
+  h3 {
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #595959;
+    border-bottom: 1px solid #d6d6d6;
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+  }
+}
+
+.footer-logo {
+  position: relative;
+  height: 1px;
+  text-align: center;
+  top: -177px;
+}
+
+.contact {
+  float: left;
+  width: 270px;
+
+  .naming {
+    font-weight: 700;
+    color: #595959;
+    letter-spacing: 1px;
+  }
+
+  p {
+    margin-bottom: 40px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #595959;
+    letter-spacing: 1px;
+    line-height: 24px;
+  }
+
+  a {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 34px;
+
+    &:last-child {
+        margin-right: 0;
+      }
+
+    &.facebook {
+        height: 16px;
+        width: 8px;
+        background: image-url("icons_sprite.png") no-repeat -59px -2px;
+    }
+
+    &.twitter {
+        height: 13px;
+        width: 17px;
+        background: image-url("icons_sprite.png") no-repeat -133px -2px;
+    }
+
+    &.dribbble {
+        height: 16px;
+        width: 17px;
+        background: image-url("icons_sprite.png") no-repeat -38px -2px;
+    }
+
+    &.googleplus {
+        height: 17px;
+        width: 16px;
+        background: image-url("icons_sprite.png") no-repeat -71px -2px;
+    }
+  }
+}
+
+.support {
+  float: right;
+
+  a {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: #595959;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 5px;
+    padding-right: 120px;
+  }
+
+  a:before {
+    content:  "-";
+    position: relative;
+    left: -5px;
+  }
+}
+
+/* оплата - нижняя плашка*/
+
+.payments {
+  clear: both;
+  height: 62px;
+  line-height: 62px;
+  text-align: center;
+  background-color: #fff;
+    a {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 28px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.paypal {
+        height: 15px;
+        width: 52px;
+        background: image-url("payments_sprite.png") no-repeat -106px -2px;
+      }
+
+      &.visa {
+        height: 14px;
+        width: 42px;
+        background: image-url("payments_sprite.png") no-repeat -209px -2px;
+      }
+
+      &.mastercard {
+        height: 23px;
+        width: 38px;
+        background: image-url("payments_sprite.png") no-repeat -64px -2px;
+      }
+
+      &.discover {
+        height: 10px;
+        width: 58px;
+        background: image-url("payments_sprite.png") no-repeat -2px -2px;
+      }
+
+      &.skrill {
+        height: 14px;
+        width: 43px;
+        background: image-url("payments_sprite.png") no-repeat -162px -2px;
+      }
+    }
+}

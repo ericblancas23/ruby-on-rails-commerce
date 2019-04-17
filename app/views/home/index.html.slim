@@ -1,0 +1,29 @@
+.pcontent.holder.clearfix
+  .fixedblocks
+    .collection
+      = image_tag("http://pipsum.com/290x680.jpg", alt: "Фотография товара")
+      .feblaunches
+      .button
+        a href="/#collection" see colection
+    .sales.fixblock
+      a href="/#sales"
+        = image_tag("http://pipsum.com/560x362.jpg", alt: "Фотография товара")
+        .summersale
+    .newarrivals.fixblock
+      a href="/#newarrivals"
+        = image_tag("http://pipsum.com/290x362.jpg", alt: "Фотография товара")
+    .lbotblock.fixblock
+      a href="/#lbotblock"
+        = image_tag("http://pipsum.com/280x298.jpg", alt: "Фотография товара")
+    .rbotblock.fixblock
+      a href="/#rbotblock"
+        = image_tag("http://pipsum.com/570x298.jpg", alt: "Фотография товара")
+  .products
+    - if @products_list.any?
+      .countprod = "we have over #{@products_list.total_count - 1} products in our shop"
+      = render 'products'
+      - if @products_list.total_count > 8
+        .loadmore
+          = link_to "+ load more products", { page: 2 }, remote: true
+    - else
+      .countprod = "we haven't got any products in our shop, sorry"
